@@ -1,0 +1,28 @@
+Algoritmo Poliza 
+Escribir lista_de_expresiones	
+	Definir SumaAsegurada, MontoAseguradora, MontoSocios, MontoAseguradora2, MontoSocioEspecial Como Entero
+	
+	Escribir "Ingrese la Suma Asegurada:"
+	Leer SumaAsegurada
+	
+	Si SumaAsegurada <= 100000 Entonces
+		MontoAseguradora <- SumaAsegurada * 0.8
+		MontoSocios <- (SumaAsegurada - MontoAseguradora) / 2
+	Sino
+		Si SumaAsegurada > 100000 Y SumaAsegurada <= 120000 Entonces
+			MontoAseguradora <- 100000 * 0.8
+			Resto <- SumaAsegurada - 100000
+			MontoSocios <- Resto / 2
+		Sino
+			MontoAseguradora <- 100000 * 0.8
+			MontoAseguradora2 <- 20000 * 0.8
+			MontoSocioEspecial <- SumaAsegurada - MontoAseguradora - MontoAseguradora2
+		Fin Si
+	Fin Si
+	
+	Escribir "Monto para la Aseguradora:", MontoAseguradora
+	Escribir "Monto para Socios:", MontoSocios
+	Escribir "Monto para Aseguradora (2da parte):", MontoAseguradora2
+	Escribir "Monto para Socio Contrato Especial:", MontoSocioEspecial
+	
+FinAlgoritmo
